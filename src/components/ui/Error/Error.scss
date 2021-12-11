@@ -1,0 +1,8 @@
+@import "./mixins.scss";
+@import "./var.scss";
+
+.error {
+  color: $error;
+  font-weight: 700;
+  align-self: start;
+}

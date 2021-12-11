@@ -1,0 +1,11 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.MuiAccordionSummary-root.Mui-expanded {
+  min-height: unset !important;
+}
+.MuiAccordionSummary-content.Mui-expanded {
+  margin: 0 !important;
+}
+.MuiAccordionDetails-root {
+  display: unset !important;
+}

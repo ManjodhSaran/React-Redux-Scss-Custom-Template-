@@ -1,0 +1,119 @@
+@import "./var.scss";
+
+@mixin flex($dir, $ai, $jc) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin fitToScreen() {
+  width: 100vw;
+  height: 100vh;
+}
+@mixin centerWithFlex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerWithGrid() {
+  display: grid;
+  place-items: center;
+}
+@mixin icon-small() {
+  height: 25px;
+  width: 25px;
+  object-fit: contain;
+}
+@mixin icon-medium() {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+@mixin icon-large() {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+@mixin delay($sec) {
+  transition: all $sec ease-in-out;
+}
+@mixin scrollbar-styles {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    // border-radius: 20px;
+    // border-radius: 20px;
+    border: 6px solid transparent;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #101946;
+  }
+}
+@mixin scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  font-size: $small;
+  font-weight: $medium;
+  text-decoration: none;
+  text-align: left;
+  text-transform: unset;
+  color: #ffffff;
+}
+@mixin force-reset {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: $small !important;
+  font-weight: $medium !important;
+  text-decoration: none !important;
+  text-align: left !important;
+  text-transform: unset !important;
+  color: #ffffff !important;
+}
+
+@mixin shadow-bottom {
+  box-shadow: 1px 10px 16px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 10px 16px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 10px 16px -6px rgba(0, 0, 0, 0.75);
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 375px) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}

@@ -1,0 +1,90 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.addImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+  transition: background 0.5s linear !important;
+  position: relative;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    > .icon {
+      width: 90px !important;
+      height: 90px !important;
+    }
+  }
+  > .changeImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    h2 {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      margin-bottom: 1rem;
+    }
+    h3 {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  > .controls {
+    > * {
+      position: absolute;
+    }
+    .icon {
+      height: 3rem;
+      width: 3rem;
+      background: rgba(255, 255, 255, 0.5) !important;
+      border-radius: 50%;
+    }
+    .previous {
+      left: 0;
+      transform: rotate(180deg);
+    }
+    .next {
+      right: 0;
+    }
+    .label {
+      bottom: 0;
+      left: 50%;
+      padding: 0.3rem 1rem;
+      margin-bottom: 0.3rem;
+      border-radius: 0.8rem;
+      background: rgba(255, 255, 255, 0.5);
+      transform: translateX(-50%);
+      p {
+        font-weight: 600;
+      }
+    }
+    .delete {
+      top: 0;
+      right: 0;
+      .deleteIcon {
+        color: $error;
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+      .deleteIconButton {
+      }
+    }
+  }
+}

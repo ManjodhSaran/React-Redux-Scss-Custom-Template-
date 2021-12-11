@@ -1,0 +1,14 @@
+.toggleSwitch {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.32s ease-in-out;
+    flex: 1;
+  }
+}

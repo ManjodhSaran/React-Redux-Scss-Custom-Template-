@@ -1,0 +1,132 @@
+@import "./mixins.scss";
+@import "./var.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+.df {
+  display: flex;
+}
+.dfc {
+  display: flex;
+  flex-direction: column;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.bg-error {
+  background-color: $error !important;
+  color: #fff !important;
+}
+.bg-success {
+  background-color: $success !important;
+  color: #fff !important;
+}
+.bg-primary {
+  background-color: $primary !important;
+}
+.bg-warning {
+  background-color: $warning !important;
+}
+.bg-info {
+  background-color: $info !important;
+}
+.bg-basic {
+  background-color: $basic !important;
+}
+.bg-sec {
+  background-color: $secondary !important;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.txt-primary {
+  color: $primary !important;
+}
+.txt-error {
+  color: $error !important;
+}
+.txt-success {
+  color: $success !important;
+}
+.txt-warning {
+  color: $warning !important;
+}
+.txt-info {
+  color: $info !important;
+}
+.txt-basic {
+  color: $basic !important;
+}
+.txt-sec {
+  color: $secondary !important;
+}
+.txt-st-7 {
+  font-weight: 700;
+}
+.br-bt-error {
+  border-bottom: 4px solid $error !important;
+}
+.br-bt-success {
+  border-bottom: 4px solid $success !important;
+}
+.br-bt-warning {
+  border-bottom: 4px solid $warning !important;
+}
+.br-bt-info {
+  border-bottom: 4px solid $info !important;
+}
+.br-bt-basic {
+  border-bottom: 4px solid $basic !important;
+}
+.br-bt-sec {
+  border-bottom: 4px solid $secondary !important;
+}
+.link {
+  color: primary;
+  cursor: pointer;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.MuiSelect-iconOutlined {
+  margin-top: 0.45rem !important;
+}
+.MuiSelect-icon {
+  margin-top: 0.45rem !important;
+}

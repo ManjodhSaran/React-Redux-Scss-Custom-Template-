@@ -1,0 +1,23 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.customBadge {
+  position: relative;
+  margin: 0 1rem;
+  .icon {
+    height: 2rem !important;
+    width: 2rem !important;
+  }
+  > .badge {
+    position: absolute;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    top: 0.6rem;
+    right: 0.6rem;
+  }
+}

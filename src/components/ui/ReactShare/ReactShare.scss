@@ -1,0 +1,47 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.reactShare {
+}
+.reactShareModal {
+  .socialButtons {
+    display: flex;
+    justify-content: space-around;
+    .socialButton {
+      vertical-align: top;
+      display: inline-block;
+      margin-right: 10px;
+      text-align: center;
+    }
+  }
+  .copylink {
+    display: flex;
+    // width: 100%;
+    margin: 0 2rem;
+    margin-top: 2rem;
+    p {
+      flex: 1;
+      background-color: #cdcdcd;
+      padding: 1rem 2rem;
+      border-radius: 0.4rem 0 0 0.4rem;
+      font-weight: 600;
+    }
+    button {
+      background-color: gray;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 0 0.4rem 0.4rem 0;
+      cursor: pointer;
+      font-size: 1.2rem !important;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .copied {
+      background-color: $primary;
+      color: $warning;
+    }
+    .buttonIcon {
+      color: $warning;
+    }
+  }
+}

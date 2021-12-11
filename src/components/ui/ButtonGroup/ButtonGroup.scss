@@ -1,0 +1,11 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.buttonGroup {
+  margin-bottom: 0.5rem;
+  button {
+    height: 3rem;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    font-size: 1rem;
+  }
+}

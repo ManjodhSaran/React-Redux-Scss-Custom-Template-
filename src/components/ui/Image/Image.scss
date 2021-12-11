@@ -1,0 +1,14 @@
+.Image {
+  position: relative;
+  > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  .imageLoading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
