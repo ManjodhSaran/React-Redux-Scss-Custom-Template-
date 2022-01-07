@@ -1,0 +1,22 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/var.scss";
+.apiInput {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  align-items: center;
+  //   justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0 !important;
+    flex: 1;
+  }
+  > .input {
+    width: 3rem;
+  }
+  > .button {
+    margin-left: 0.5rem;
+  }
+}

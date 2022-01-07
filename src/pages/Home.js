@@ -1,5 +1,7 @@
 import React from 'react'
 import AddImage from '../components/ui/AddImage/AddImage'
+import CustomButton from '../components/ui/CustomButton/CustomButton'
+import CustomInput from '../components/ui/CustomInput'
 import '../styles/Home.scss'
 
 const Home = () => {
@@ -14,7 +16,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="item">
-
                         <div className="label">
                             Alert
                         </div>

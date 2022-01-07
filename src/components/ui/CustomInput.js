@@ -2,7 +2,7 @@ import { TextField } from '@material-ui/core'
 import React from 'react'
 
 
-const CustomTextField = (props) => {
+const CustomInput = (props) => {
     return (
         <TextField
             size="small"
@@ -16,4 +16,4 @@ const CustomTextField = (props) => {
     )
 }
 
-export default CustomTextField
+export default CustomInput
