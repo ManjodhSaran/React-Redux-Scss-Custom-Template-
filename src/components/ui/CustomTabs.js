@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Paper } from '@material-ui/core';
-import './CustomTabs.scss'
+import '../../styles/CustomTabs.scss'
 
 const CustomTabs = ({ tabs, hide, vertical, label, small, reloadConsistency, defaultTab }) => {
     const [value, setValue] = useState(0);

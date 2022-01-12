@@ -10,6 +10,7 @@ const CustomInput = (props) => {
             variant="outlined"
             color="primary"
             className="input"
+            name={props?.title && props.title.toLowerCase()}
             label={props?.title}
             {...props}
         />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Paper } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close';
 import '../../styles/Alert.scss'

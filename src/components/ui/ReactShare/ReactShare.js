@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, InstapaperIcon, InstapaperShareButton, LinkedinIcon, LinkedinShareButton, PinterestIcon, PinterestShareButton, TelegramIcon, TelegramShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from "react-share";
 import { Button, ClickAwayListener, Paper } from '@material-ui/core';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-import './ReactShare.scss'
 import CustomModal from '../CustomModal';
 import CustomTooltip from '../CustomTooltip';
+import './ReactShare.scss'
 
 const socialButtons = [
     { Button: FacebookShareButton, Icon: FacebookIcon, label: 'Facebook' },
@@ -19,8 +19,8 @@ const socialButtons = [
 
 const iconProps = { size: 32, round: true }
 
-const ReactShare = ({ url, close, list }) => {
-    if (!list) list = [...socialButtons.label]
+const ReactShare = ({ show = true, url, close, list }) => {
+    // if (!list) list = [...socialButtons.label]
 
     const [copied, setCopied] = useState(false);
     const caption = '';
@@ -44,18 +44,20 @@ const ReactShare = ({ url, close, list }) => {
     }
 
     return (
-        <div className='reactShare'>
+        show && <div className='reactShare'>
             <CustomModal body={
                 <ClickAwayListener onClickAway={close}>
                     <div className="reactShareModal">
                         <div className="socialButtons">
                             {socialButtons.map(({ Button, Icon, label }, i) =>
-                                list.includes(label.toLowerCase()) && <div key={i} className="socialButton">
+                                <div key={i} className="socialButton">
                                     <CustomTooltip
                                         title={`Share on ${label}`}
-                                        body={<Button {...buttonProps}>
-                                            <Icon {...iconProps} />
-                                        </Button>}
+                                        body={
+                                            <Button {...buttonProps}>
+                                                <Icon {...iconProps} />
+                                            </Button>
+                                        }
                                         arrow
                                     />
                                 </div>

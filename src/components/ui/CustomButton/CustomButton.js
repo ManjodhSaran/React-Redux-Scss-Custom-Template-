@@ -6,10 +6,9 @@ const CustomButton = (props) => {
         <Button
             color="primary"
             variant="contained"
+            endIcon={props?.loading && <CircularProgress size={12} color="inherit" />}
             {...props}
             className={`button ${props.className}`}
-            endIcon={props?.loading && <CircularProgress size={12} color="inherit" />
-            }
         > {props.title}</Button>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import CustomModal from '../CustomModal'
-import CustomButton from '../CustomButton/CustomButton'
+import CustomModal from './CustomModal'
+import CustomButton from './CustomButton/CustomButton'
 import '../../styles/AlertBeforeAction.scss'
 import { CircularProgress } from '@material-ui/core'
 
